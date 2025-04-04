@@ -1,0 +1,408 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9D7004FE-1E7E-43D6-B1C3-A16E2DB294F6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>shoesproject</RootNamespace>
+    <AssemblyName>shoesproject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="addcate.aspx" />
+    <Content Include="addcategory.aspx" />
+    <Content Include="addoreditcategory.aspx" />
+    <Content Include="addoreditproduct.aspx" />
+    <Content Include="addpod.aspx" />
+    <Content Include="addproduct.aspx" />
+    <Content Include="adminh.aspx" />
+    <Content Include="aviewfeedback.aspx" />
+    <Content Include="aviewpayedproducts.aspx" />
+    <Content Include="bill.aspx" />
+    <None Include="Connected Services\balcheck\Service.disco" />
+    <None Include="Connected Services\balcheck\configuration91.svcinfo" />
+    <None Include="Connected Services\balcheck\configuration.svcinfo" />
+    <None Include="Connected Services\balcheck\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\balupdate\Service.disco" />
+    <None Include="Connected Services\balupdate\configuration91.svcinfo" />
+    <None Include="Connected Services\balupdate\configuration.svcinfo" />
+    <None Include="Connected Services\balupdate\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="sendfeedback.aspx" />
+    <Content Include="uviewcart.aspx" />
+    <Content Include="viewcart.aspx" />
+    <Content Include="adminhomee.aspx" />
+    <Content Include="adminreg.aspx" />
+    <Content Include="category.png" />
+    <Content Include="css\images\border.gif" />
+    <Content Include="css\images\cart-price.gif" />
+    <Content Include="css\images\cart.gif" />
+    <Content Include="css\images\container-t.gif" />
+    <Content Include="css\images\field.gif" />
+    <Content Include="css\images\image1.jpg" />
+    <Content Include="css\images\image2.jpg" />
+    <Content Include="css\images\image3.jpg" />
+    <Content Include="css\images\image4.jpg" />
+    <Content Include="css\images\logo.gif" />
+    <Content Include="css\images\logo1.gif" />
+    <Content Include="css\images\logo2.gif" />
+    <Content Include="css\images\logo3.gif" />
+    <Content Include="css\images\logo4.gif" />
+    <Content Include="css\images\logo5.gif" />
+    <Content Include="css\images\main.gif" />
+    <Content Include="css\images\next.gif" />
+    <Content Include="css\images\prev.gif" />
+    <Content Include="css\images\search.gif" />
+    <Content Include="css\images\slide1.jpg" />
+    <Content Include="css\images\slide2.jpg" />
+    <Content Include="css\images\tab.gif" />
+    <Content Include="css\style.css" />
+    <Content Include="editcategory.aspx" />
+    <Content Include="editproduct.aspx" />
+    <Content Include="index.html" />
+    <Content Include="js\jquery-1.4.1.min.js" />
+    <Content Include="js\jquery-func.js" />
+    <Content Include="js\jquery.jcarousel.pack.js" />
+    <Content Include="js\jquery.slide.js" />
+    <Content Include="product.jpg" />
+    <Content Include="regform.aspx" />
+    <Content Include="userhome.aspx" />
+    <Content Include="userreg.aspx" />
+    <Content Include="uviewproditem.aspx" />
+    <Content Include="uviewproducts.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addcate.aspx.cs">
+      <DependentUpon>addcate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addcate.aspx.designer.cs">
+      <DependentUpon>addcate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addcategory.aspx.cs">
+      <DependentUpon>addcategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addcategory.aspx.designer.cs">
+      <DependentUpon>addcategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addoreditcategory.aspx.cs">
+      <DependentUpon>addoreditcategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addoreditcategory.aspx.designer.cs">
+      <DependentUpon>addoreditcategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addoreditproduct.aspx.cs">
+      <DependentUpon>addoreditproduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addoreditproduct.aspx.designer.cs">
+      <DependentUpon>addoreditproduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addpod.aspx.cs">
+      <DependentUpon>addpod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addpod.aspx.designer.cs">
+      <DependentUpon>addpod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addproduct.aspx.cs">
+      <DependentUpon>addproduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addproduct.aspx.designer.cs">
+      <DependentUpon>addproduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminh.aspx.cs">
+      <DependentUpon>adminh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminh.aspx.designer.cs">
+      <DependentUpon>adminh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aviewfeedback.aspx.cs">
+      <DependentUpon>aviewfeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aviewfeedback.aspx.designer.cs">
+      <DependentUpon>aviewfeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aviewpayedproducts.aspx.cs">
+      <DependentUpon>aviewpayedproducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aviewpayedproducts.aspx.designer.cs">
+      <DependentUpon>aviewpayedproducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bill.aspx.cs">
+      <DependentUpon>bill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bill.aspx.designer.cs">
+      <DependentUpon>bill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\balcheck\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\balupdate\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="sendfeedback.aspx.cs">
+      <DependentUpon>sendfeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sendfeedback.aspx.designer.cs">
+      <DependentUpon>sendfeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uviewcart.aspx.cs">
+      <DependentUpon>uviewcart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uviewcart.aspx.designer.cs">
+      <DependentUpon>uviewcart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewcart.aspx.cs">
+      <DependentUpon>viewcart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewcart.aspx.designer.cs">
+      <DependentUpon>viewcart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminhomee.aspx.cs">
+      <DependentUpon>adminhomee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminhomee.aspx.designer.cs">
+      <DependentUpon>adminhomee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminreg.aspx.cs">
+      <DependentUpon>adminreg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminreg.aspx.designer.cs">
+      <DependentUpon>adminreg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="connectionclass.cs" />
+    <Compile Include="editcategory.aspx.cs">
+      <DependentUpon>editcategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editcategory.aspx.designer.cs">
+      <DependentUpon>editcategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editproduct.aspx.cs">
+      <DependentUpon>editproduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editproduct.aspx.designer.cs">
+      <DependentUpon>editproduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="regform.aspx.cs">
+      <DependentUpon>regform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="regform.aspx.designer.cs">
+      <DependentUpon>regform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="userhome.aspx.cs">
+      <DependentUpon>userhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userhome.aspx.designer.cs">
+      <DependentUpon>userhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userreg.aspx.cs">
+      <DependentUpon>userreg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userreg.aspx.designer.cs">
+      <DependentUpon>userreg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uviewproditem.aspx.cs">
+      <DependentUpon>uviewproditem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uviewproditem.aspx.designer.cs">
+      <DependentUpon>uviewproditem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uviewproducts.aspx.cs">
+      <DependentUpon>uviewproducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uviewproducts.aspx.designer.cs">
+      <DependentUpon>uviewproducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\balcheck\Service.wsdl" />
+    <None Include="Connected Services\balcheck\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\balcheck\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\balcheck\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\balcheck\shoesproject.balcheck.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\balupdate\Service.wsdl" />
+    <None Include="Connected Services\balupdate\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\balupdate\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\balupdate\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\balupdate\shoesproject.balupdate.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="category\" />
+    <Folder Include="product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\balcheck\" />
+    <WCFMetadataStorage Include="Connected Services\balupdate\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56712</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56712/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
