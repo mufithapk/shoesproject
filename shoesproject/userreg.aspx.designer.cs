@@ -15,24 +15,6 @@ namespace shoesproject
     {
 
         /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-
-        /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-
-        /// <summary>
         /// TextBox1 control.
         /// </summary>
         /// <remarks>
@@ -42,13 +24,13 @@ namespace shoesproject
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// Label3 control.
+        /// rfvName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvName;
 
         /// <summary>
         /// TextBox2 control.
@@ -60,13 +42,22 @@ namespace shoesproject
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
 
         /// <summary>
-        /// Label4 control.
+        /// rfvAge control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAge;
+
+        /// <summary>
+        /// revAge control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revAge;
 
         /// <summary>
         /// TextBox3 control.
@@ -78,13 +69,22 @@ namespace shoesproject
         protected global::System.Web.UI.WebControls.TextBox TextBox3;
 
         /// <summary>
-        /// Label5 control.
+        /// rfvEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
+
+        /// <summary>
+        /// revEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
 
         /// <summary>
         /// TextBox4 control.
@@ -96,15 +96,6 @@ namespace shoesproject
         protected global::System.Web.UI.WebControls.TextBox TextBox4;
 
         /// <summary>
-        /// Label6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
-
-        /// <summary>
         /// TextBox5 control.
         /// </summary>
         /// <remarks>
@@ -114,13 +105,13 @@ namespace shoesproject
         protected global::System.Web.UI.WebControls.TextBox TextBox5;
 
         /// <summary>
-        /// Label7 control.
+        /// revPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPhone;
 
         /// <summary>
         /// TextBox6 control.
@@ -132,15 +123,6 @@ namespace shoesproject
         protected global::System.Web.UI.WebControls.TextBox TextBox6;
 
         /// <summary>
-        /// Label8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
-
-        /// <summary>
         /// DropDownList1 control.
         /// </summary>
         /// <remarks>
@@ -150,13 +132,13 @@ namespace shoesproject
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
 
         /// <summary>
-        /// Label9 control.
+        /// rfvState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvState;
 
         /// <summary>
         /// DropDownList2 control.
@@ -168,13 +150,13 @@ namespace shoesproject
         protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
 
         /// <summary>
-        /// Label10 control.
+        /// rfvDistrict control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDistrict;
 
         /// <summary>
         /// TextBox7 control.
@@ -186,13 +168,13 @@ namespace shoesproject
         protected global::System.Web.UI.WebControls.TextBox TextBox7;
 
         /// <summary>
-        /// Label11 control.
+        /// rfvUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUsername;
 
         /// <summary>
         /// TextBox8 control.
@@ -202,6 +184,15 @@ namespace shoesproject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox8;
+
+        /// <summary>
+        /// rfvPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPassword;
 
         /// <summary>
         /// Button1 control.

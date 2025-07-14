@@ -64,10 +64,7 @@ namespace shoesproject
 
                 }
             }
-            else
-            {
-                Label3.Text = "invalid usernme and password";
-            }
+           
            
 
         }

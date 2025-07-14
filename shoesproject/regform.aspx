@@ -1,138 +1,78 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="regform.aspx.cs" Inherits="shoesproject.regform" %>
+﻿<%@ Page Title="Registration Form" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="regform.aspx.cs" Inherits="shoesproject.regform" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style1 {
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .form-container {
             width: 100%;
+            max-width: 400px;
+            margin: 60px auto;
+            padding: 40px 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
-        .auto-style2 {
-            width: 518px;
+
+        .form-container:hover {
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
         }
-        .auto-style3 {
-            width: 73px;
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 26px;
+            font-weight: 600;
+            color: #333;
         }
-        .auto-style4 {
-            width: 185px;
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: none;
+            transition: background-color 0.3s ease;
         }
-        .auto-style5 {
-            width: 518px;
-            height: 142px;
+
+        .btn-user {
+            background-color: #007BFF;
+            color: white;
         }
-        .auto-style6 {
-            width: 73px;
-            height: 142px;
+
+        .btn-user:hover {
+            background-color: #0056b3;
         }
-        .auto-style7 {
-            width: 185px;
-            height: 142px;
+
+        .btn-admin {
+            background-color: #6f42c1;
+            color: white;
         }
-        .auto-style8 {
-            height: 142px;
+
+        .btn-admin:hover {
+            background-color: #5936a2;
         }
-        .auto-style9 {
-            width: 518px;
-            height: 19px;
-        }
-        .auto-style10 {
-            width: 73px;
-            height: 19px;
-        }
-        .auto-style11 {
-            width: 185px;
-            height: 19px;
-        }
-        .auto-style12 {
-            height: 19px;
-        }
-        .auto-style13 {
-            width: 312px;
-        }
-        .auto-style14 {
-            height: 142px;
-            width: 312px;
-        }
-        .auto-style15 {
-            height: 19px;
-            width: 312px;
+
+        @media (max-width: 500px) {
+            .form-container {
+                margin: 30px 15px;
+                padding: 30px 20px;
+            }
         }
     </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table class="auto-style1">
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style13">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style13">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style5"></td>
-            <td class="auto-style6">
-                <asp:Button ID="Button1" runat="server" Font-Bold="True" ForeColor="Black" Height="32px" OnClick="Button1_Click" Text="User registration" Width="137px" />
-            </td>
-            <td class="auto-style7">&nbsp;</td>
-            <td class="auto-style14">&nbsp;</td>
-            <td class="auto-style8"></td>
-            <td class="auto-style8"></td>
-        </tr>
-        <tr>
-            <td class="auto-style9"></td>
-            <td class="auto-style10"></td>
-            <td class="auto-style11">&nbsp;</td>
-            <td class="auto-style15"></td>
-            <td class="auto-style12"></td>
-            <td class="auto-style12"></td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style13">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">
-                <asp:Button ID="Button2" runat="server" Font-Bold="True" ForeColor="Black" Height="32px" OnClick="Button2_Click" Text="Admin registration" Width="137px" />
-            </td>
-            <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style13">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style13">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style13">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style13">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
+    <div class="form-container">
+        <div class="form-header">Choose Registration Type</div>
+
+        <asp:Button ID="Button1" runat="server" CssClass="btn btn-user" Text="User Registration" OnClick="Button1_Click" />
+        
+        <asp:Button ID="Button2" runat="server" CssClass="btn btn-admin" Text="Admin Registration" OnClick="Button2_Click" />
+    </div>
 </asp:Content>

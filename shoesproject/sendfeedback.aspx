@@ -23,24 +23,10 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style3">
-                <asp:Label ID="Label1" runat="server" Text="send feedback"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="send feedback" Font-Bold="True" Font-Size="XX-Small" ForeColor="Black"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="TextBox1" runat="server" Height="30px" TextMode="MultiLine" Width="271px"></asp:TextBox>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>
-                <asp:Button ID="Button1" runat="server" Height="30px" OnClick="Button1_Click" Text="send" Width="89px" />
+                <asp:TextBox ID="TextBox1" runat="server" Height="30px" TextMode="MultiLine" Width="271px" BorderColor="Black" BorderWidth="2px" Font-Bold="True" ForeColor="Black"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -54,7 +40,21 @@
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td>
-                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                <asp:Button ID="Button1" runat="server" Height="30px" OnClick="Button1_Click" Text="send" Width="89px" BackColor="#99FF99" BorderColor="Black" BorderWidth="2px" Font-Bold="True" Font-Size="XX-Small" ForeColor="Black" />
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td>
+                <asp:Label ID="Label2" runat="server" Text="Label" Font-Bold="True" Font-Size="XX-Small" ForeColor="Black" Height="29px" Width="48px"></asp:Label>
             </td>
             <td>&nbsp;</td>
         </tr>

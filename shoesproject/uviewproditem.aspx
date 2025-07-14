@@ -1,241 +1,124 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="uviewproditem.aspx.cs" Inherits="shoesproject.uviewproditem" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style1 {
+        .product-container {
             width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 30px 0;
         }
-        .auto-style2 {
-            width: 478px;
+
+        .product-card {
+            border: 2px solid #0099CC;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            width: 500px;
         }
-        .auto-style3 {
-            width: 140px;
+
+        .product-card img {
+            display: block;
+            margin: 0 auto 15px;
+            height: 133px;
+            object-fit: cover;
         }
-        .auto-style4 {
-            width: 478px;
-            height: 19px;
+
+        .product-label {
+            font-weight: bold;
+            margin: 5px 0;
+            color: #333;
         }
-        .auto-style5 {
-            width: 140px;
-            height: 19px;
+
+        .quantity-panel {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff0f5;
+            border: 1px solid #ccc;
+            border-radius: 6px;
         }
-        .auto-style6 {
-            height: 19px;
+
+        .quantity-panel label,
+        .quantity-panel input {
+            display: block;
+            margin-bottom: 8px;
         }
-        .auto-style7 {
-            width: 138px;
+
+        .buttons-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
         }
-        .auto-style8 {
-            width: 478px;
-            height: 36px;
+
+        .logout-container {
+            margin-top: 40px;
         }
-        .auto-style9 {
-            width: 140px;
-            height: 36px;
+
+        .btn {
+            background-color: #ffccff;
+            padding: 6px 12px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            color: black;
+            cursor: pointer;
+        }
+
+        .btn-logout {
+            background-color: #ff5050;
+            color: white;
         }
     </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table class="auto-style1">
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">
-                &nbsp;</td>
-            <td class="auto-style3">
-                <asp:DataList ID="DataList1" runat="server">
-                    <ItemTemplate>
-                        <table class="auto-style1">
-                            <tr>
-                                <td class="auto-style7">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style7">
-                                    <asp:Image ID="Image1" runat="server" Height="133px" ImageUrl='<%# Eval("product_image") %>' />
-                                </td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style7">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style7">
-                                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("product_name") %>'></asp:Label>
-                                </td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style7">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style7">
-                                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("product_price") %>'></asp:Label>
-                                </td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style7">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style7">
-                                    <asp:Label ID="Label3" runat="server" Text='<%# Eval("product_description") %>'></asp:Label>
-                                </td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style7">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style7">
-                                    <asp:Label ID="Label5" runat="server" Text='<%# Eval("stock") %>'></asp:Label>
-                                </td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style7">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style7">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style7">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style7">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </table>
-                    </ItemTemplate>
-                </asp:DataList>
-            </td>
-            <td>
-                <asp:Panel ID="Panel1" runat="server" Visible="False">
-                </asp:Panel>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">
-                &nbsp;</td>
-            <td class="auto-style3">
-                &nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">
-                &nbsp;</td>
-            <td class="auto-style3">
-                <asp:Panel ID="Panel2" runat="server" Height="91px" Width="121px">
-                    <asp:Label ID="Label6" runat="server" Text="quantity"></asp:Label>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                    <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
-                    <asp:Label ID="Label9" runat="server" Text="                   total price is:"></asp:Label>
-                    <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
-                </asp:Panel>
-            </td>
-            <td>
-                <asp:Button ID="Button2" runat="server" Text="logout" OnClick="Button2_Click" />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style8"></td>
-            <td class="auto-style9">
-                &nbsp;</td>
-            <td class="auto-style9">
-                <asp:Button ID="Button1" runat="server" ForeColor="Red" Text="add to cart" OnClick="Button1_Click" />
-            </td>
-            <td class="tabs">
-                <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="view cart" />
-                </td>
-        </tr>
-        <tr>
-            <td class="auto-style4"></td>
-            <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style5"></td>
-            <td class="auto-style6"></td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>
-                &nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style4"></td>
-            <td class="auto-style5">
-                &nbsp;</td>
-            <td class="auto-style5">
-                </td>
-            <td class="auto-style6">
-                </td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
+    <div class="product-container">
+        <asp:DataList ID="DataList1" runat="server" BorderColor="#0099CC" BorderStyle="Ridge">
+            <ItemTemplate>
+                <div class="product-card">
+                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("product_image") %>' />
+
+                    <div class="product-label">
+                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("product_name") %>' ForeColor="Black" />
+                    </div>
+
+                    <div class="product-label">
+                        Price: ₹<asp:Label ID="Label2" runat="server" Text='<%# Eval("product_price") %>' ForeColor="Black" />
+                    </div>
+
+                    <div class="product-label">
+                        Description:
+                        <asp:Label ID="Label3" runat="server" Text='<%# Eval("product_description") %>' ForeColor="Black" />
+                    </div>
+
+                    <div class="product-label">
+                        Stock Available:
+                        <asp:Label ID="Label5" runat="server" Text='<%# Eval("stock") %>' ForeColor="Black" />
+                    </div>
+                </div>
+            </ItemTemplate>
+        </asp:DataList>
+    </div>
+
+    <div class="product-container">
+        <asp:Panel ID="Panel2" runat="server" CssClass="quantity-panel" Width="300px">
+            <asp:Label ID="Label6" runat="server" Text="Quantity:" Font-Bold="True" ForeColor="Black" />
+            <asp:TextBox ID="TextBox1" runat="server" Width="100%" BorderColor="#3366CC" />
+
+            <asp:Label ID="Label8" runat="server" Text="Label" Font-Bold="True" ForeColor="Black" />
+            <asp:Label ID="Label9" runat="server" Text="Total price is:" Font-Bold="True" ForeColor="Black" />
+            <asp:Label ID="Label7" runat="server" Text="0" Font-Bold="True" ForeColor="Black" />
+        </asp:Panel>
+    </div>
+
+    <div class="product-container">
+        <div class="buttons-container">
+            <asp:Button ID="Button1" runat="server" CssClass="btn" Text="Add to Cart" OnClick="Button1_Click" />
+            <asp:Button ID="Button3" runat="server" CssClass="btn" Text="View Cart" OnClick="Button3_Click" />
+        </div>
+    </div>
+
+    <div class="product-container logout-container">
+        <asp:Button ID="Button2" runat="server" CssClass="btn btn-logout" Text="Logout" OnClick="Button2_Click" />
+    </div>
 </asp:Content>

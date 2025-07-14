@@ -24,15 +24,6 @@ namespace shoesproject
         protected global::System.Web.UI.WebControls.DataList DataList1;
 
         /// <summary>
-        /// Panel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
-
-        /// <summary>
         /// Panel2 control.
         /// </summary>
         /// <remarks>
@@ -87,15 +78,6 @@ namespace shoesproject
         protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// Button2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
-
-        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>
@@ -112,5 +94,14 @@ namespace shoesproject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button3;
+
+        /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

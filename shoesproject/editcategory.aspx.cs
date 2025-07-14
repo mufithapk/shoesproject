@@ -97,8 +97,15 @@ namespace shoesproject
 
 
         }
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("WebForm1.aspx"); // or your login page
+        }
 
-        
-        
+
+
+
     }
 }

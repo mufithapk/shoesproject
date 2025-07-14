@@ -1,110 +1,107 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="uviewcart.aspx.cs" Inherits="shoesproject.uviewcart" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style1 {
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+            background-color: #f0f4f8;
+        }
+
+        .cart-wrapper {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             width: 100%;
+            max-width: 900px;
         }
-        .auto-style2 {
-            width: 253px;
+
+        .gridview-style {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        .auto-style3 {
-            height: 74px;
+
+        .gridview-style th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px 10px;
+            font-size: 15px;
+            text-align: left;
         }
-        .auto-style4 {
-            width: 253px;
-            height: 74px;
+
+        .gridview-style td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
         }
-        .auto-style5 {
-            height: 19px;
+
+        .gridview-style tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
-        .auto-style6 {
-            width: 253px;
-            height: 19px;
+
+        .gridview-style tr:hover {
+            background-color: #eef6ff;
+        }
+
+        .gridview-style .aspNet-GridView a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .btn-confirm {
+            margin-top: 10px;
+            padding: 12px 25px;
+            background-color: #28a745;
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-confirm:hover {
+            background-color: #218838;
+        }
+
+        .total-label {
+            font-weight: bold;
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 15px;
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table class="auto-style1">
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style3"></td>
-            <td class="auto-style4">
-                <asp:GridView ID="GridView1" runat="server" DataKeyNames="product_id,cart_id" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanging="GridView1_SelectedIndexChanging">
-                    <Columns>
-                        <asp:CommandField ShowEditButton="True" />
-                        <asp:CommandField ShowDeleteButton="True" />
-                    </Columns>
-                </asp:GridView>
-            </td>
-            <td class="auto-style3">
-                &nbsp;</td>
-            <td class="auto-style3"></td>
-        </tr>
-        <tr>
-            <td class="auto-style5"></td>
-            <td class="auto-style6"></td>
 
-            <td class="auto-style5">
-                </td>
-            <td class="auto-style5"></td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style2">
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-            </td>
-            <td>
-                &nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style2">
-                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="confirm" />
-            </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container">
+        <div class="cart-wrapper">
+            <asp:GridView ID="GridView1" runat="server" CssClass="gridview-style aspNet-GridView"
+                DataKeyNames="product_id,cart_id"
+                OnRowCancelingEdit="GridView1_RowCancelingEdit"
+                OnRowDeleting="GridView1_RowDeleting"
+                OnRowEditing="GridView1_RowEditing"
+                OnRowUpdating="GridView1_RowUpdating"
+                OnSelectedIndexChanging="GridView1_SelectedIndexChanging"
+                AutoGenerateColumns="True">
+                <Columns>
+                    <asp:CommandField ShowEditButton="True" EditText="✏️ Edit" />
+                    <asp:CommandField ShowDeleteButton="True" DeleteText="🗑️ Delete" />
+                </Columns>
+            </asp:GridView>
+
+            <div class="total-label">
+                <asp:Label ID="Label1" runat="server" Text="Total: ₹0.00"></asp:Label>
+            </div>
+
+            <asp:Button ID="Button1" runat="server" Text="Confirm Order" OnClick="Button1_Click" CssClass="btn-confirm" />
+        </div>
+    </div>
 </asp:Content>

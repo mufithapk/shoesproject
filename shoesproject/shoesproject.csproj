@@ -94,6 +94,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="sendfeedback.aspx" />
+    <Content Include="test.aspx" />
     <Content Include="uviewcart.aspx" />
     <Content Include="viewcart.aspx" />
     <Content Include="adminhomee.aspx" />
@@ -225,6 +226,13 @@
     </Compile>
     <Compile Include="sendfeedback.aspx.designer.cs">
       <DependentUpon>sendfeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="uviewcart.aspx.cs">
       <DependentUpon>uviewcart.aspx</DependentUpon>
